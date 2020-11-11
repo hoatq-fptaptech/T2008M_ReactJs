@@ -1,67 +1,6 @@
-const products=[
-    {
-        name:"Flying Ninja",
-        image:"imgs/product.jpg",
-        price: 12,
-        star:5
-    },
-    {
-        name:"Flying Ninja",
-        image:"imgs/product.jpg",
-        price: 12,
-        star:1
-    },
-    {
-        name:"Flying Ninja",
-        image:"imgs/product.jpg",
-        price: 12,
-        star:2
-    },
-    {
-        name:"Flying Ninja",
-        image:"imgs/product.jpg",
-        price: 12,
-        star:3.5
-    },
-    {
-        name:"Flying Ninja",
-        image:"imgs/product.jpg",
-        price: 12,
-        star:4.5
-    },
-    {
-        name:"Flying Ninja",
-        image:"imgs/product.jpg",
-        price: 12,
-        star:3.5
-    },
-    {
-        name:"Flying Ninja",
-        image:"imgs/product.jpg",
-        price: 12,
-        star:3.5
-    },
-    {
-        name:"Flying Ninja",
-        image:"imgs/product.jpg",
-        price: 12,
-        star:3.5
-    },
-    {
-        name:"Flying Ninja",
-        image:"imgs/product.jpg",
-        price: 12,
-        star:3.5
-    },
-    {
-        name:"Flying Ninja",
-        image:"imgs/product.jpg",
-        price: 12,
-        star:3.5
-    }
-
-];
-export default function Main() {
+import React from "react";
+export default function Main(props) {
+    const products = props.productlist;
     return (
         <section className="section main">
             <div className="container">
@@ -70,7 +9,7 @@ export default function Main() {
                     {
                         products.map(function (e,i) {
                             return (
-                                <div className="col-md-4">
+                                <div key={i} className="col-md-4">
                                     <div className="item text-center">
                                         <img className="product-image" src={e.image}/>
                                         <h2 className="product-name">{e.name}</h2>
