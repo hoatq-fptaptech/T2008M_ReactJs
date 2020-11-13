@@ -17,11 +17,11 @@ class App extends React.Component{
     componentDidMount() {
         // lay du lieu tu api roi cho vao products
         fetch("https://foodgroup.herokuapp.com/api/today-special")
-            .then(rs=>rs.json())
-            .then(rs=> {
-                this.setState({
-                    products:rs.data
-                })
+            .then(function (rs) {
+                return rs.json();
+            })
+            .then(function (rs) {
+                this.setState({products:rs.data})
             })
     }
     render() {
