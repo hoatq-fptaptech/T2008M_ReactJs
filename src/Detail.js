@@ -14,10 +14,12 @@ export default function Detail(props) {
     if(p===null)
         return (<h1>Ko tim thay san pham</h1>);
     return (
-        <div>
-        <h1>{p.name}</h1>
-        <h2>{p.price}</h2>
-        <h2>{p.star}</h2>
-        </div>
+        <section className="section">
+            <div className="container">
+                <h1>{p.name}</h1>
+                <img src={p.image}/>
+                <p>{p.price}</p>
+            </div>
+        </section>
     );
 }
