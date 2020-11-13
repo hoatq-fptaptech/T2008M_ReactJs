@@ -1,4 +1,6 @@
 import React from "react";
+import {Link} from "react-router-dom";
+
 export default function Main(props) {
     const products = props.productlist;
     return (
@@ -19,7 +21,7 @@ export default function Main(props) {
                                             </div>
                                         </div>
                                         <p className="price">${e.price}</p>
-                                        <a href="#" className="add-to-cart text-uppercase">Add To Cart</a>
+                                        <Link to={"/detail/"+e.id} className="add-to-cart text-uppercase">Add To Cart</Link>
                                     </div>
                                 </div>
                             );
